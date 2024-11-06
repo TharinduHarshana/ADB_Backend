@@ -2,7 +2,7 @@ const db = require('../config/db');
 
 const Item = {
   getAll: (callback) => {
-    db.query('SELECT * FROM supplier', callback);
+    db.query('SELECT * FROM supplierdetails;', callback);
   },
   create: (data, callback) => {
     db.query('INSERT INTO supplier SET ?', data, callback);
