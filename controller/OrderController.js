@@ -40,6 +40,7 @@ exports.getSingleOrder = (req, res) => {
 exports.updateOrder = (req, res) => {
   const id = req.params.id;
   const updatedOrder = req.body;
+  console.log(updatedOrder);
   Order.update(id, updatedOrder, (err, result) => {
     if (err) {
       return res.status(500).json({ error: err.message });

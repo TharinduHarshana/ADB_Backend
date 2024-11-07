@@ -13,6 +13,7 @@ exports.getAllCustomer = (req, res) => {
 //create an Customer
 exports.createCustomer = (req, res) => {
   const newCustomer = req.body;
+  console.log(newCustomer);
   Customer.create(newCustomer, (err, result) => {
     if (err) {
       return res.status(500).json({ error: err.message });

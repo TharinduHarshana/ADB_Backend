@@ -10,6 +10,9 @@ const InventoryRoutes = require('./routes/InventoryRoutes');
 const ExpenseRoutes = require('./routes/ExpenseRoutes');
 const Customer = require('./routes/CustomerRoutes');
 const OrderRoutes = require('./routes/OrderRoutes');
+const Report = require('./routes/ReportRoutes');
+const User = require('./routes/UserRoutes');
+const Dashboard = require('./routes/DashboardRoutes');
 
 
 const app = express();
@@ -26,6 +29,9 @@ app.use('/api/inventory', InventoryRoutes);
 app.use('/api/expenses', ExpenseRoutes);
 app.use('/api/customers', Customer);
 app.use('/api/orders', OrderRoutes);
+app.use('/api/reports', Report);
+app.use('/api/users', User);
+app.use('/api/dashboard', Dashboard);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
